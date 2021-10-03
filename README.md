@@ -1,5 +1,7 @@
 # Go Ethereum Block By Date
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/Tech-engine/goethblockbydate)](https://goreportcard.com/report/github.com/Tech-engine/go)
+
 Get Ethereum block number by a given date.
 
 Works with any Ethereum based mainnet or testnet networks.
@@ -21,6 +23,7 @@ package main
 import (
 	"github.com/Tech-engine/goethblockbydate"
 	"log"
+	"fmt"
 )
 
 func main() {
