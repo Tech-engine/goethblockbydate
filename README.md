@@ -29,6 +29,7 @@ import (
 func main() {
 	// get node url
 	goethblockbydate.SetNode("YOUR_INFURA_OR_ANY_OTHER_NODE_URL")
+	// ISO 8601 datestring. Ex:  2021-03-01T05:30:00+05:30, 2021-03-01T00:00:00Z
 	block, err := goethblockbydate.GetDate("2021-02-05T00:00:00Z",  true)
 	if err != nil {
 		log.Fatal(err)
