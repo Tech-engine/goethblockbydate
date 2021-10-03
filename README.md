@@ -1,5 +1,3 @@
-# goethblockbydate
-
 # Go Ethereum Block By Date
 
 Get Ethereum block number by a given date.
