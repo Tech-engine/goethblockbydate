@@ -8,7 +8,6 @@ import (
 	"math/big"
 	"strconv"
 	"sync"
-
 	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/nleeper/goment"
 )
@@ -49,6 +48,7 @@ func contains(s *[]*big.Int, item *big.Int) bool {
 	return false
 }
 
+// for setting node url
 func SetNode(url string) {
 	nodeUrl = url
 }
@@ -74,6 +74,7 @@ func setBoundaries() error {
 	return nil
 }
 
+// GetDate takes in an ISO 8601 datestring and outputs a block number
 func GetDate(dateStr string, after bool) (*newBlockWrapper, error) {
 
 	if nodeUrl == "" {
@@ -246,9 +247,8 @@ func getNextBlock(date *goment.Goment, currentBlockNumber *big.Int, skip *big.In
 			nextBlk, err := getNextBlock(date, currentBlockNumber, skip)
 			if err != nil {
 				return nil, err
-			} else {
-				return nextBlk, nil
 			}
+			return nextBlk, nil
 		}
 	}
 
