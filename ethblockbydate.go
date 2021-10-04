@@ -48,7 +48,7 @@ func contains(s *[]*big.Int, item *big.Int) bool {
 	return false
 }
 
-// for setting node url
+// SetNode sets node url
 func SetNode(url string) {
 	nodeUrl = url
 }
