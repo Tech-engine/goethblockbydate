@@ -80,7 +80,9 @@ func GetDate(dateStr string, after bool) (*newBlockWrapper, error) {
 	if nodeUrl == "" {
 		return nil, errors.New("Node URL is required")
 	}
+	mutex.Lock()
 	date, err := goment.New(dateStr, "YYYY-MM-DDTHH:mm:ssZ")
+	mutex.Unlock()
 
 	if err != nil {
 		return nil, err
